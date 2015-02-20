@@ -3,7 +3,8 @@ a simple weather forecasting app written in swift
 I used inspect element tool of my browser to filter <span> elements of http://www.weather-forecast.com
 
 
- var urlContentArray =  urlContent.componentsSeparatedByString("<span class=\"phrase\">")
+  var urlContentArray =  urlContent.componentsSeparatedByString("<span class=\"phrase\">")
+
 
 did the trick for me!
 
