@@ -31,8 +31,6 @@ class ViewController: UIViewController {
                         self.fetchWeather(by: city)
                     }
                 }
-                
-            
             }).disposed(by: disposeBag)
     }
     
@@ -43,6 +41,7 @@ class ViewController: UIViewController {
         }
         let resource = Resource<WeatherResult>(url: url)
         URLRequest.load(resource: resource)
+            .observeOn(MainScheduler.instance)
             .catchErrorJustReturn(WeatherResult.empty)
             .subscribe(onNext: { result in
                 
