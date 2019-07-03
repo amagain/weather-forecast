@@ -42,9 +42,10 @@ class ViewController: UIViewController {
             let url = URL.urlForWeatherAPI(city: cityEncoded) else {
                 return
         }
-        let resource = Resource<WeatherResult>(url: url)        
+        let resource = Resource<WeatherResult>(url: url)
         let search = URLRequest.load(resource: resource)
         .observeOn(MainScheduler.instance)
+            .retry(3)
             .catchError { error in
                 print(error.localizedDescription)
                 return Observable.just(WeatherResult.empty)
