@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var cityNameTextField: UITextField!
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var humidityLabel: UILabel!
@@ -20,9 +20,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-  
-        self.cityNameTextField.rx.value
-            .subscribe(onNext: { city in
+        
+        self.cityNameTextField.rx.controlEvent(.editingDidEndOnExit)
+            .asObservable()
+            .map { self.cityNameTextField.text }
+            .subscribe (onNext: { city in
                 if let city = city {
                     if city.isEmpty {
                         self.displayWeather(nil)
@@ -32,6 +34,7 @@ class ViewController: UIViewController {
                     }
                 }
             }).disposed(by: disposeBag)
+        
     }
     
     private func fetchWeather(by city: String) {
@@ -59,7 +62,7 @@ class ViewController: UIViewController {
             self.humidityLabel.text = "🙅‍♂️"
         }
     }
-
-
+    
+    
 }
 
