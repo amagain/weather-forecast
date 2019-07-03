@@ -15,6 +15,7 @@
 		CE042AD022CC4A4800689830 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE042ACE22CC4A4800689830 /* LaunchScreen.storyboard */; };
 		CE042AD922CC4E9500689830 /* WeatherResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE042AD822CC4E9500689830 /* WeatherResult.swift */; };
 		CE042ADC22CC4FA300689830 /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE042ADB22CC4FA300689830 /* URLRequest+Extensions.swift */; };
+		CE042ADE22CC544600689830 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE042ADD22CC544600689830 /* URL+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		CE042AD122CC4A4800689830 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE042AD822CC4E9500689830 /* WeatherResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResult.swift; sourceTree = "<group>"; };
 		CE042ADB22CC4FA300689830 /* URLRequest+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extensions.swift"; sourceTree = "<group>"; };
+		CE042ADD22CC544600689830 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
 		DC652D8B04B4A4F813D02B30 /* Pods-Weather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.release.xcconfig"; path = "Target Support Files/Pods-Weather/Pods-Weather.release.xcconfig"; sourceTree = "<group>"; };
 		F17B8EEFE465407089123D9F /* Pods-Weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.debug.xcconfig"; path = "Target Support Files/Pods-Weather/Pods-Weather.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				CE042ADB22CC4FA300689830 /* URLRequest+Extensions.swift */,
+				CE042ADD22CC544600689830 /* URL+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 			files = (
 				CE042AD922CC4E9500689830 /* WeatherResult.swift in Sources */,
 				CE042ADC22CC4FA300689830 /* URLRequest+Extensions.swift in Sources */,
+				CE042ADE22CC544600689830 /* URL+Extensions.swift in Sources */,
 				CE042AC822CC4A4700689830 /* ViewController.swift in Sources */,
 				CE042AC622CC4A4700689830 /* AppDelegate.swift in Sources */,
 			);
